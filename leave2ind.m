@@ -33,7 +33,7 @@ nodesperlevel=ones(1,d);                % level i-1 contains nodesperlevel(i) no
 endI=ones(1,d);                         % endI(i) is the index of the last SVD of level i-1
 for i=2:d
     r(i)=min(n(i-1),prod(n(i:end)));
-    nodesperlevel(i)=prod(r(1:i));
+    nodesperlevel(i)=prod(r(1:i));%nodesperlevel(2) is equal to the level 1 nodes
     endI(i)=sum(nodesperlevel(1:i));
 end
 
