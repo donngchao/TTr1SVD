@@ -23,8 +23,8 @@ function indices=leave2ind(sigmaI,n)
 d=length(n);                            % order of the tensor
 if d==2
     % matrix case
-    indices=ones(length(sigmaI),2);
-    indices(:,2)=[1:length(sigmaI)]';
+    indices=ones(length(sigmaI),2);%generate a (length(sigmaI),2) matrix with all the entries are 1.
+    indices(:,2)=[1:length(sigmaI)]';%modify the second column to be [1:length(sigmaI)]
     return
 end
 
