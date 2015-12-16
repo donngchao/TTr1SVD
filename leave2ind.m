@@ -51,7 +51,7 @@ indices=zeros(length(sigmaI),2*(length(n)-1));
 for j=1:length(sigmaI)
     
     % determine offset for each node
-    if mod(k(j),r(end))==0
+    if mod(k(j),r(end))==0                   %the r(end)'s end stands for the last index of the array.
         k(j)=k(j)/r(end);
         l(j)=r(end);
     else
