@@ -40,7 +40,7 @@ end
 %last endI points to last SVD of previous level       
 endI=endI(1:end-2); 
 
-% k(i) containst the offset of the ith term with respect to endI for
+% k(i) contains the offset of the ith term with respect to endI for
 % level d-i, initalize to sigmaI
 k=sigmaI;
 % l tells us which element of S{k(i)}(:,l(i)) we need to choose
