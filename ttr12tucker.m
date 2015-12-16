@@ -30,7 +30,7 @@ function [S,Q]=ttr12tucker(U,sigmas,V,n)
 %
 % 2015, Kim Batselier, Haotian Liu, Ngai Wong
 
-d=length(n);
+d=length(n);%This is the dimension of the tensor that we focused,which is the same way to say the size of the original tensor A.
 indices=leave2ind(find(sigmas),n); % only handle nonzero sigmas
 nonzerosigmas=sigmas(find(sigmas));
 
