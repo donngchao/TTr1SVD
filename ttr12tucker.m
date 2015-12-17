@@ -40,7 +40,8 @@ Ut=cell(1,d);
 for i=d:-1:2
     for j=min(indices(:,2*(i-2)+1)):max(indices(:,2*(i-2)+1))
         I=find(indices(:,2*(i-2)+1)==j);
-        Ut{d-i+1}=[Ut{d-i+1} U{j}(:,intersect(indices(I,2*(i-2)+2),indices(I,2*(i-2)+2)))];
+        Ut{d-i+1}=[Ut{d-i+1} U{j}(:,intersect(indices(I,2*(i-2)+2),indices(I,2*(i-2)+2)))];%the intersect here means both set have the 
+        %same elements
         if i==2
             Ut{d}=[Ut{d} V{j}(:,intersect(indices(I,2*(i-2)+2),indices(I,2*(i-2)+2)))];
         end
