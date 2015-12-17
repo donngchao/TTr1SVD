@@ -7,7 +7,7 @@ function ocv=verifyOrtc(A,O)
 % ocv       =   vector, each ith entry is an inner product of outer product of
 %               O{:,i} with A. This should be numerically zero,
 %
-% A         =   array, d-way array,
+% A         =   array, d-way array,it's also a tensor.
 %
 % O         =   cell, orthogonal tensors computed with orthc.m.
 %
