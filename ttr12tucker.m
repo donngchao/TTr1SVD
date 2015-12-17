@@ -33,8 +33,9 @@ function [S,Q]=ttr12tucker(U,sigmas,V,n)
 d=length(n);
 indices=leave2ind(find(sigmas),n); % only handle nonzero sigmas
 nonzerosigmas=sigmas(find(sigmas));
-
-Ut=cell(1,d);
+%cell():This MATLAB function creates a cell array of empty matrices.In the following case:its size will be 1 by d matrix,
+%rather than a tensor.
+Ut=cell(1,d);         
 % Concatenate all U and V vectors along each mode
 for i=d:-1:2
     for j=min(indices(:,2*(i-2)+1)):max(indices(:,2*(i-2)+1))
