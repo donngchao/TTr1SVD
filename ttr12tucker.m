@@ -4,7 +4,8 @@ function [S,Q]=ttr12tucker(U,sigmas,V,n)
 % Converts a tensor A of size n in the TTr1SVD format to the Tucker (HOSVD) format.
 % Usually results in a more sparse core S compared to traditional methods
 % (e.g. Alternating Least Squares). By setting entries of the sigmas vector
-% to zero the Tucker format of a truncated TTr1 will be obtained.
+% to zero the Tucker format of a truncated TTr1 will be obtained.This means that the Tucker 
+%version is a kind of estimation of TTr1.
 %
 % S         =   d-way array, the core tensor in the Tucker decomposition,
 %
