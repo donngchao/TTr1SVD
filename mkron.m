@@ -24,7 +24,8 @@ if n<2
 end
 
 % check whether second argument is a scalar, if so, then repeatedly apply
-% kronecker product onto first argument
+% kronecker product onto first argument,this is similar to the exponential 
+% of the matrix itself.
 if isscalar(varargin{2})
     n=varargin{2};
     y=varargin{1};
