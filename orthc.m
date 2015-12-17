@@ -82,8 +82,8 @@ sigmas=ones(nleaf,1);         % output singular values at each leaf
 for i=1:length(r),
     sigmas=sigmas.*Slevel{i};
 end
-
-if nargin==2
+%This MATLAB function returns the number of input arguments passed in the call to the currently executing function.
+if nargin==2                  %returns the number of function input arguments.
     tol=varargin{1};
 else
     tol= max(n)*eps(sigmas(1));
