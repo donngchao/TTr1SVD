@@ -2,7 +2,8 @@ function O=orthc(A,varargin)
 % O=orthc(A) or O=orthc(A,tol)
 % ----------------------------
 % Computes the outer product vectors that span the orthogonal complement
-% tensors.
+% tensors.The result that has been calculated is to iterate along the tree
+% data structure.
 %
 % O         =   cell, each column of O contains outer product vectors that form
 %               a tensor orthogonal to A,
