@@ -38,7 +38,9 @@ nleaf=prod(r);%This will tell us the tree has how many leaves.After all it is st
 U=cell(1,totalsvd);
 S=cell(1,totalsvd);
 V=cell(1,totalsvd);
-
+%First reshape the tensor to become a new matrix,and then using the svd operation on this matrix.
+%Precisely,it's better to understand this process as decrease the dimension of the tensor to only 2,
+%and then calculate the svd as usual. 
 [Ut St Vt]=svd(reshape(A,[n(1),prod(n(2:end))]));
 U{1}=Ut;
 S{1}=diag(St);
