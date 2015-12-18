@@ -33,7 +33,7 @@ for i=2:length(r)   %Here explains other level contain how many nodes are contai
     svdsperlevel(i)=prod(r(1:i-1));%I see r plays a very important role here in deciding how many svds on this level.But why?
     totalsvd=totalsvd+svdsperlevel(i);%Total number of svds in the whole levels of the tree. 
 end
-nleaf=prod(r);
+nleaf=prod(r);%This will tell us the tree has how many leaves.After all it is still a tree.
 
 U=cell(1,totalsvd);
 S=cell(1,totalsvd);
