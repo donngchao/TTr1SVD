@@ -22,9 +22,9 @@ function O=orthc(A,varargin)
 % 2015, Kim Batselier, Haotian Liu, Ngai Wong
 
 n=size(A);
-r=zeros(1,length(n)-1);
+r=zeros(1,length(n)-1);%The tree has a deep degree of length(n)-1.
 for i=1:length(n)-1
-    r(i) = min(n(i),prod(n(i+1:end)));
+    r(i) = min(n(i),prod(n(i+1:end)));%For every level,there should be some nodes.
 end
 totalsvd=1;
 svdsperlevel=zeros(1,length(r));   % add length 1 for the first level
