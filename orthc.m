@@ -43,8 +43,8 @@ V=cell(1,totalsvd);
 %and then calculate the svd as usual. 
 [Ut St Vt]=svd(reshape(A,[n(1),prod(n(2:end))]));
 U{1}=Ut;%U{1} stores the first U matrix after calculating the svd for the first time after the reshaping of the tensor.
-S{1}=diag(St);
-V{1}=Vt;
+S{1}=diag(St);%S{1} stores the eigen values of the first svd result.
+V{1}=Vt;%V{1} stores the firsr V matrix after calculating the svd for the first time after the reshaping of the tensor.
 counter=2; % this counter keeps track during the iterations which V{i} we are computing. This is a linear counter that counts breadth-first
 whichvcounter=1;    % this counter keeps track during the iterations of which V we are taking the svd
 
