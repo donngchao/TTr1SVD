@@ -28,7 +28,7 @@ for i=1:length(n)-1
 end
 totalsvd=1;
 svdsperlevel=zeros(1,length(r));   % add length 1 for the first level
-svdsperlevel(1)=1;  % first level
+svdsperlevel(1)=1;  % The first level should just contains only 1 svd node,we view it as a node here.
 for i=2:length(r)
     svdsperlevel(i)=prod(r(1:i-1));
     totalsvd=totalsvd+svdsperlevel(i); 
