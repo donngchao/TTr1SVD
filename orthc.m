@@ -47,7 +47,7 @@ S{1}=diag(St);%S{1} stores the eigen values of the first svd result.
 V{1}=Vt;%V{1} stores the firsr V matrix after calculating the svd for the first time after the reshaping of the tensor.
 counter=2; % this counter keeps track during the iterations which V{i} we are computing. This is a linear counter that counts breadth-first
 whichvcounter=1;    % this counter keeps track during the iterations of which V we are taking the svd
-
+%In fact this is how the algorithm will retrieve the whole tree.
 for i=1:length(r)-1           % outer loop over the levels
     for j=1:prod(r(1:i))      % inner loop over the number of svds for this level 
         if rem(j,r(i)) == 0
