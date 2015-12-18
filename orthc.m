@@ -55,6 +55,10 @@ for i=1:length(r)-1           % outer loop over the levels
         else
             col=rem(j,r(i));
         end
+        %Actually I may figure out what the code above are doing by either reading the paper or figure out the code below first.
+        %So,let's do it.You can see here that V{whichvcounter} is just after V{1} and you should just view it as another normal V.
+        %But (:,col) is pretty different from A.It's V{1}(:,col) and col is just a scalar,this means that we should make some change 
+        %based on the col that we have already calculated above.
         [Ut St Vt]=svd(reshape(V{whichvcounter}(:,col),[n(i+1),prod(n(i+2:end))]));
         U{counter}=Ut;
         S{counter}=diag(St);
